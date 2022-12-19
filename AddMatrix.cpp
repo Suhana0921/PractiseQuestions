@@ -12,7 +12,6 @@ int main()
     cin >> c;
 
     cout << endl << "Enter elements of 1st matrix: " << endl;
-
     for(i = 0; i < r; ++i)
        for(j = 0; j < c; ++j)
        {
