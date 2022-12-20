@@ -20,6 +20,7 @@ int main()
         cout << "Enter rows and columns for second matrix: ";
         cin >> r2 >> c2;
     }
+    
 
     cout << endl << "Enter elements of matrix 1:" << endl;
     for(i = 0; i < r1; ++i)
@@ -28,6 +29,7 @@ int main()
             cout << "Enter element a" << i + 1 << j + 1 << " : ";
             cin >> a[i][j];
         }
+    
 
     cout << endl << "Enter elements of matrix 2:" << endl;
     for(i = 0; i < r2; ++i)
@@ -51,6 +53,7 @@ int main()
             }
 
     cout << endl << "Output Matrix: " << endl;
+    
     for(i = 0; i < r1; ++i)
     for(j = 0; j < c2; ++j)
     {
