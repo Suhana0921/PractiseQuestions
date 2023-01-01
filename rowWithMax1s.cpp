@@ -3,13 +3,13 @@ using namespace std;
 
 int row_with_max_1s(vector<vector<int>>matrix)
 {
-    int max_one = 0;          // maximum number of 1's
+    int max_one = 0;   
 
-    int max_one_index = 0;    // index of the row having the maximum number of 1's
+    int max_one_index = 0;  
 
     for (int i = 0; i < matrix.size(); i++)
     {
-        int count = 0;   // number of 1's in current row
+        int count = 0;  
 
         for (int j = 0; j < matrix[0].size(); j++)
         {
