@@ -1,6 +1,6 @@
 #include<iostream> 
 using namespace std;
-/* Each node of a tree consists of a 1 data field and 2 links, 1 for left child and 1 for right child */
+
 typedef struct Node
 { 
   int data; 
@@ -23,7 +23,7 @@ int main()
   
   return 0; 
 } 
-/* This function is used to create new node with the given data */
+
 Node* new_node(int data) 
 { 
   Node* node = new Node; 
@@ -51,9 +51,9 @@ void morris_preorder_traversal(Node* root)
     } 
     else
     { 
-      /* Finding preorder predecessor */
+
       Node* curr=find_preorder_predecessor(root);
-      /* If preorder predecessor's right child is already pointing to root */ 
+
       if (curr->right == root) 
       { 
         curr->right = NULL; 
