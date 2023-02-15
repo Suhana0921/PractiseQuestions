@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
     int a[10][10], b[10][10], mult[10][10], r1, c1, r2, c2, i, j, k;
