@@ -1,7 +1,6 @@
 #include<iostream>
-#include<list> // for list operations
+#include<list> 
 using namespace std;
-  
 int main()
 {
     list<int> list1={10,15,20,25,30,35};
