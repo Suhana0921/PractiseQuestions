@@ -5,7 +5,6 @@ bool cmp(vector<int> a, vector<int> b)
 {
     return b[1] > a[1];
 }
-
 int minArrows(vector<vector<int>> points)
 {
    
