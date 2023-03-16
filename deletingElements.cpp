@@ -4,7 +4,6 @@ using namespace std;
 int main()
 {
     list<int> list1={10,15,20,25,30,35};
-
     cout << "The original list is : ";
     for (list<int>::iterator i=list1.begin(); i!=list1.end(); i++)
        cout << *i << " ";
