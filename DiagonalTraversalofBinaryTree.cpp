@@ -1,47 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
-// Tree node
+
 struct Node
 {
     int data;
     Node *left, *right;
 };
  
-/* root - root of the binary tree
-   d -  distance of current line from rightmost
-        -topmost slope.
-   diagonalPrint - multimap to store Diagonal
-                   elements (Passed by Reference) */
 void diagonalPrintUtil(Node* root, int d,
                 map<int, vector<int>> &diagonalPrint)
 {
-    // Base case
     if (!root)
         return;
- 
-    // Store all nodes of same
-    // line together as a vector
+
     diagonalPrint[d].push_back(root->data);
- 
-    // Increase the vertical
-    // distance if left child
+
     diagonalPrintUtil(root->left,
                       d + 1, diagonalPrint);
- 
-    // Vertical distance remains
-    // same for right child
+
     diagonalPrintUtil(root->right,
                          d, diagonalPrint);
 }
- 
-// Print diagonal traversal
-// of given binary tree
+
 void diagonalPrint(Node* root)
 {
-     
-    // create a map of vectors
-    // to store Diagonal elements
+
     map<int, vector<int> > diagonalPrint;
     diagonalPrintUtil(root, 0, diagonalPrint);
  
@@ -54,8 +37,7 @@ void diagonalPrint(Node* root)
         cout<<endl;
     }
 }
- 
-// Utility method to create a new node
+
 Node* newNode(int data)
 {
     Node* node = new Node;
@@ -64,7 +46,6 @@ Node* newNode(int data)
     return node;
 }
  
-// Driver program
 int main()
 {
     Node* root = newNode(8);
@@ -77,17 +58,6 @@ int main()
     root->left->right->left = newNode(4);
     root->left->right->right = newNode(7);
  
-    /*  Node* root = newNode(1);
-        root->left = newNode(2);
-        root->right = newNode(3);
-        root->left->left = newNode(9);
-        root->left->right = newNode(6);
-        root->right->left = newNode(4);
-        root->right->right = newNode(5);
-        root->right->left->right = newNode(7);
-        root->right->left->left = newNode(12);
-        root->left->right->left = newNode(11);
-        root->left->left->right = newNode(10);*/
  
     diagonalPrint(root);
  
